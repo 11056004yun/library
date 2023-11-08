@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>圖書館首頁</title>
+    </head>
+    <body>
+        {% extends 'base.html' %}
+        {% block title %} {{ post.title }} - 文學天地{% endblock %}
+        <hr>
+        {% block headmessage %}
+            <h3 style='font-family:微軟正黑體;'>{{ post.title }}</h3>
+            <a style='font-family:微軟正黑體;' href='/'>回首頁</a>
+        {% endblock %}
+        {% block content %} 
+            <p style="font-family:微軟正黑體;font-size:12pt;letter-spacing:2pt;">
+                {{post.body}}</a>
+            </p>
+        {% endblock %}
+        <hr>
+        <h3>
+            <a href='/'>回首頁</a>
+        </h3>
+    </body>
+</html>
