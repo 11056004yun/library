@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        圖書館首頁
+    </title>
+
+</head>
+
+<body>
+    {% extends 'base.html' %}
+    {% block title %} 圖書館首頁 {% endblock %}
+    {% block headmessage %}
+    <footer>
+        <p>11056004石之昀 11056011吳佳宸</p>
+    </footer>
+        <h3 style='font-family:微軟正黑體;'>本站書籍列表</a>
+    {% endblock %}
+    {% block content %}
+    {% for book in books %}
+        <p style='font-family:微軟正黑體;font-size:14pt;font-weight:bold;'>
+            <a href='/book/{{book.id}}'>{{book.title}}</a>
+        </p>
+    {% endfor %} 
+    {% endblock %}
+
+    
+</body>
+
+
+</html>
